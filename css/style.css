@@ -7,7 +7,6 @@
 }
 
 .header-top {
-  outline: 1px solid red;
   background-color: #EEEEEE;
   padding: 5px 0;
 }
@@ -83,6 +82,14 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 35px;
+  position: relative;
+}
+
+.header-search .cart-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
 .header-search input {
@@ -108,7 +115,7 @@
 
 .first-section {
   background-color: #F6F6F6;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #fff;
   padding-bottom: 20px;
 }
 
@@ -137,6 +144,10 @@
   font-size: 20px;
 }
 
+.first-section__item-description .cloud-icon {
+  padding: 10px 0 35px;
+}
+
 .first-section__item-description:nth-child(1) {
   margin-top: 40px !important;
 }
@@ -158,7 +169,7 @@
 .second-section {
   padding: 20px 0;
   background-color: #F6F6F6;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #fff;
 }
 
 .second-section__title {
@@ -237,7 +248,7 @@
 .third-section {
   padding: 20px 0;
   background-color: #F6F6F6;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #fff;
 }
 
 .third-section__title {
@@ -252,7 +263,7 @@
 .fourth-section {
   padding: 20px 0;
   background-color: #F6F6F6;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #fff;
 }
 
 .fourth-section__title {
@@ -265,18 +276,32 @@
 }
 
 .fifth-section,
-.faq-section,
-.sixth-section,
-.seventh-section {
-  padding: 20px 0;
+.faq-section {
+  padding: 10px 0;
   background-color: #F6F6F6;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #fff;
 }
 
 .faq-section__title {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
+}
+
+.fifth-section .fa-chevron-right:before,
+.fifth-section .fa-chevron-left:before {
+  font-size: 60px;
+}
+
+.fifth-section .carousel .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.sixth-section {
+  padding: 20px 0;
+  background-color: #F6F6F6;
 }
 
 .sixth-section__title {
@@ -291,6 +316,11 @@
 
 .sixth-section .white-bg {
   background: #fff;
+}
+
+.seventh-section {
+  padding: 10px 0;
+  background-color: #F6F6F6;
 }
 
 .seventh-section .forward-block {
@@ -345,7 +375,7 @@
 }
 
 .accordion#accordion-items .card-body {
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .accordion#accordion-items .card-body a {
@@ -375,6 +405,10 @@
 .accordion#accordion-items .card-header:not(.collapsed) span .rotate-icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.accordion#accordion-items .acc-wrapper {
+  padding-top: 20px;
 }
 
 .page-wrapper {
