@@ -56,16 +56,14 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a href="#cardOne" onclick="openAccordionOne('cardOne')"
-                                        class="nav-link">Marquees</a>
+                                    <a href="#cardOne" onclick="showAccordion('One')" class="nav-link">Marquees</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#cardThree" onclick="openAccordionThree('cardThree')"
-                                        class="nav-link">Garden
+                                    <a href="#cardThree" onclick="showAccordion('Three')" class="nav-link">Garden
                                         Gazebos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#cardTwo" onclick="openAccordionTwo('cardTwo')" class="nav-link">Pop
+                                    <a href="#cardTwo" onclick="showAccordion('Two')" class="nav-link">Pop
                                         Up
                                         Gazebos</a>
                                 </li>
@@ -825,37 +823,14 @@
     </script>
 
     <script>
-        function openAccordionOne(cardOne) {
-            document.getElementById('cardOne').classList.remove("collapsed");
-            document.getElementById('collapsecardOne').classList.add("show");
+        function showAccordion(id) {
+            let cardHeader = document.querySelectorAll('.fifth-section .card-header');
+            let collapse = document.querySelectorAll('.fifth-section .collapse');
 
-            document.getElementById('cardTwo').classList.add("collapsed");
-            document.getElementById('collapsecardTwo').classList.remove("show");
-
-            document.getElementById('cardThree').classList.add("collapsed");
-            document.getElementById('collapsecardThree').classList.remove("show");
-        }
-
-        function openAccordionTwo(cardTwo) {
-            document.getElementById('cardOne').classList.add("collapsed");
-            document.getElementById('collapsecardOne').classList.remove("show");
-
-            document.getElementById('cardTwo').classList.remove("collapsed");
-            document.getElementById('collapsecardTwo').classList.add("show");
-
-            document.getElementById('cardThree').classList.add("collapsed");
-            document.getElementById('collapsecardThree').classList.remove("show");
-        }
-
-        function openAccordionThree(cardThree) {
-            document.getElementById('cardOne').classList.add("collapsed");
-            document.getElementById('collapsecardOne').classList.remove("show");
-
-            document.getElementById('cardTwo').classList.add("collapsed");
-            document.getElementById('collapsecardTwo').classList.remove("show");
-
-            document.getElementById('cardThree').classList.remove("collapsed");
-            document.getElementById('collapsecardThree').classList.add("show");
+            collapse.forEach(elem => elem.id === `collapsecard${id}` ? elem.classList.add("show") : elem.classList
+                .remove("show"));
+            cardHeader.forEach(elem => elem.id === `card${id}` ? elem.classList.remove("collapsed") : elem.classList
+                .add("collapsed"));
         }
     </script>
 
